@@ -1,0 +1,18 @@
+ {% extends 'book_outlet/base.html' %}
+
+ {% block title%}
+    Bookstore
+ {% endblock title %}
+
+ {% block content %}
+    <h1>Welcome to the Bookstore</h1>
+    <ul>
+      {% for book in books %}
+        {% comment %} <li><a href="{{book.get_absolute_url}}"> {{ book.title }}</a> by {{ book.rating }}</li> {% endcomment %}
+        <li><a href="{{book.get_absolute_url}}"> {{ book.title }}</a> by {{ book.rating }}</li>
+        {% endfor %}
+      </ul>
+
+      <p>Total no of books  {{total_number_of_books}} ok
+        
+ {% endblock content %}
